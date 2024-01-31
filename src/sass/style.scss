@@ -16,9 +16,10 @@ html {
 }
 
 .wrapper {
-	background-color: var(--main-color);
-	width: 100dvw;
-	height: 100dvh;
+	@include mainBackground;
+}
+.photoMode {
+	@include mainBackground;
 }
 .burgerBtn {
 	padding: 10px;
@@ -125,4 +126,31 @@ html {
 	border-radius: 25px;
 	font-size: 6.4vw;
 	padding: 10px;
+}
+.galery {
+	display: flex;
+
+	width: 100%;
+
+	height: 84dvh;
+	.imgGalery {
+		height: 42dvh;
+		width: 50dvw;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow: hidden;
+	}
+	.imgOne {
+		background-image: url('/dist/img/dog-1121623_640.jpg');
+	}
+	.imgTwo {
+		background-image: url('/dist/img/dog-1877814_640.jpg');
+	}
+
+	.imgThree {
+		background-image: url('/dist/img/dog-3389729_640.jpg');
+	}
+	.imgFour {
+		background-image: url('/dist/img/dog-3391051_640.jpg');
+	}
 }
