@@ -7,6 +7,7 @@ const wrapper = document.querySelector('.wrapper')
 const photoMode = document.querySelector('.photoMode')
 const photoIcon = document.querySelector('.fa-image')
 const divAppPhoto = document.querySelector('.appPhoto')
+let textInterval
 
 const textOne = 'Pies na tym zdjęciu jest spokojny, opanowany'
 const textTwo =
@@ -15,8 +16,8 @@ const textThree = 'Pies posiada pogodne usposobienie,czuje sie komfortowo,jest z
 const textFour = 'Pies jest zrelaksowany, prawdopodobnie lekko zmęczony po spacerze'
 
 const swapSection = () => {
+	clearInterval(textInterval)
 	wrapper.classList.add('none')
-	photoMode.classList.remove('none')
 	photoMode.classList.remove('none')
 	divAppPhoto.classList.remove('imgGalery')
 	divAppPhoto.classList.remove(photo)
@@ -29,15 +30,22 @@ const chooseText = (text, photo) => {
 	divAppPhoto.classList.add('imgGalery')
 	divAppPhoto.classList.add(photo)
 	app.textContent = ''
-	for (let i = 0; i < text.length; i++) {
-		setTimeout(() => {
-			app.textContent += text[i]
-		}, 100 * i)
-	}
+	let counter = 0
+
+	textInterval = setInterval(() => {
+		if (counter < text.length) {
+			app.textContent += text[counter]
+			counter++
+		} else {
+			clearInterval(textInterval)
+		}
+	}, 100) // Czas w milisekundach, np. 1000 ms = 1 sekunda
 }
 
 btn1.addEventListener('click', () => chooseText(textOne, 'imgOne'))
 btn2.addEventListener('click', () => chooseText(textTwo, 'imgTwo'))
 btn3.addEventListener('click', () => chooseText(textThree, 'imgThree'))
-btn4.addEventListener('click', () => chooseText(textFour, 'ImgFour'))
-photoIcon.addEventListener('click', () => swapSection())
+btn4.addEventListener('click', () => chooseText(textFour, 'imgFour'))
+photoIcon.addEventListener('click', () => {
+	swapSection() // Dodatkowe działania, jeśli potrzebne
+})
