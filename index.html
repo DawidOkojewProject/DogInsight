@@ -10,15 +10,19 @@
 </head>
 
 <body>
-    <div class="wrapper none">
+    <div class="wrapper">
         <div class="nav">
             <div class="burgerBtn">
                 <div class="burgerBtn__barTop"></div>
                 <div class="burgerBtn__barMid"></div>
                 <div class="burgerBtn__barBottom"></div>
             </div>
+
+            <img class="logo" src="/dist/img/logo2.png" alt="">
         </div>
-        <div class="app"></div>
+        <div class="app">
+            <p class="appText"></p>
+        </div>
         <div class="footer">
 
             <i class="fa-solid fa-camera"></i>
@@ -30,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="photoMode">
+    <div class="photoMode none">
         <div class="nav">
             <div class="burgerBtn">
                 <div class="burgerBtn__barTop"></div>
@@ -39,14 +43,21 @@
             </div>
         </div>
         <div class="galery">
-            <div class="section">
-                <div class="imgGalery imgTwo"></div>
-                <div class="imgGalery imgOne"></div>
+
+            <div class="imgGalery imgOne">
+                <button class="choose chooseOne">Wybierz</button>
             </div>
-            <div class="section">
-                <div class="imgGalery imgFour"></div>
-                <div class="imgGalery imgThree"></div>
+            <div class="imgGalery imgTwo">
+                <button class="choose chooseTwo">Wybierz</button>
             </div>
+
+            <div class="imgGalery imgThree">
+                <button class="choose chooseThree">Wybierz</button>
+            </div>
+            <div class="imgGalery imgFour">
+                <button class="choose chooseFour">Wybierz</button>
+            </div>
+
         </div>
         <div class="footer footerPhoto">
 
@@ -59,6 +70,7 @@
             </div>
         </div>
     </div>
+    <script src="/dist/js/main.min.js"></script>
 </body>
 
 </html>
