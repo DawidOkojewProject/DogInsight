@@ -105,6 +105,43 @@ html {
 .app {
 	height: 80dvh;
 	padding: 10px 5px;
+
+	.imgGalery {
+		border-radius: 5px;
+		height: 300px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin: 5px 0;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		.choose {
+			position: absolute;
+			margin-bottom: 10%;
+			padding: 20px 80px;
+			background-color: rgba($color: #252424, $alpha: 0.3);
+			color: #fff;
+			font-size: 1.8rem;
+			border-radius: 15px;
+			border: none;
+		}
+	}
+	.imgOne {
+		background-image: url('/dist/img/dog-1121623_640.jpg');
+	}
+	.imgTwo {
+		background-image: url('/dist/img/dog-1877814_640.jpg');
+	}
+
+	.imgThree {
+		background-image: url('/dist/img/dog-3389729_640.jpg');
+	}
+	.imgFour {
+		background-image: url('/dist/img/dog-3391051_640.jpg');
+	}
 }
 
 .footer {
