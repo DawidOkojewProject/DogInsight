@@ -29,12 +29,32 @@ const textSeventh =
 	'Spokojne usposobienie jakie te psy reprezentuja widać także w tym przypadku. Pies jest skupiony na obiekcie, prawodopodobnie obserwuje jedzących wlascicieli i czekający na moment gdy "przypadkowo" spadnie im jedzenie.'
 
 const cameraFuction = () => {
+	clearInterval(textInterval)
 	wrapper.classList.add('none')
 	cameraSection.classList.remove('none')
+	divAppPhoto.classList.remove('imgGalery')
+	divAppPhoto.classList.remove('imgOne')
+	divAppPhoto.classList.remove('imgTwo')
+	divAppPhoto.classList.remove('imgThree')
+	divAppPhoto.classList.remove('imgFour')
+	divAppPhoto.classList.remove('imgFive')
+	divAppPhoto.classList.remove('imgSix')
+	divAppPhoto.classList.remove('imgSeventh')
+	app.textContent = ''
 }
 const closeFunction = () => {
+	clearInterval(textInterval)
 	wrapper.classList.remove('none')
 	cameraSection.classList.add('none')
+	divAppPhoto.classList.remove('imgGalery')
+	divAppPhoto.classList.remove('imgOne')
+	divAppPhoto.classList.remove('imgTwo')
+	divAppPhoto.classList.remove('imgThree')
+	divAppPhoto.classList.remove('imgFour')
+	divAppPhoto.classList.remove('imgFive')
+	divAppPhoto.classList.remove('imgSix')
+	divAppPhoto.classList.remove('imgSeventh')
+	app.textContent = ''
 }
 const swapSection = () => {
 	clearInterval(textInterval)
