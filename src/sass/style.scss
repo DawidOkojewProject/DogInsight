@@ -51,7 +51,7 @@ html {
 	display: flex;
 }
 .app {
-	height: 80dvh;
+	height: 85dvh;
 	padding: 10px 10px;
 	.appText {
 		font-size: 2rem;
@@ -71,7 +71,7 @@ html {
 .burgerBtn {
 	margin-top: 5px;
 	padding: 15px;
-	height: 70px;
+	height: 60px;
 	width: 80px;
 	display: flex;
 	flex-direction: column;
@@ -100,11 +100,11 @@ html {
 }
 .logo {
 	margin-top: 5px;
-	height: 70px;
+	height: 60px;
 }
 .app {
 	height: 80dvh;
-	padding: 10px 5px;
+	padding: 0px 5px;
 
 	.imgGalery {
 		border-radius: 5px;
@@ -119,6 +119,7 @@ html {
 		justify-content: center;
 		align-items: end;
 		.choose {
+			cursor: pointer;
 			position: absolute;
 			margin-bottom: 10%;
 			padding: 20px 80px;
@@ -143,34 +144,10 @@ html {
 		background-image: url('/dist/img/dog-3391051_640.jpg');
 	}
 }
-
-.footer {
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-
-	display: flex;
-}
-.camera {
-	height: 100%;
-	background: none;
-	border: none;
-}
-.fa-solid,
-.fa-regular {
-	font-size: 3.4rem;
-	padding: 10px;
-	color: #fff;
+.choose {
+	cursor: pointer;
 }
 
-.textItem {
-	width: 100%;
-	background-color: #fff;
-	border-radius: 25px;
-	font-size: 6.4vw;
-	padding: 10px;
-	border: none;
-}
 .galery {
 	display: flex;
 	flex-direction: column;
@@ -214,5 +191,35 @@ html {
 	}
 	.imgFour {
 		background-image: url('/dist/img/dog-3391051_640.jpg');
+	}
+}
+.footer {
+	display: flex;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	.camera {
+		height: 100%;
+		background: none;
+		border: none;
+	}
+	.fa-solid,
+	.fa-regular {
+		font-size: 3.4rem;
+		padding: 10px;
+		color: #fff;
+		cursor: pointer;
+	}
+	.text {
+		padding: 10px;
+		width: 100%;
+		.textItem {
+			width: 100%;
+			background-color: #fff;
+			border-radius: 25px;
+			font-size: 3.4vw;
+			padding: 10px;
+			border: none;
+		}
 	}
 }
