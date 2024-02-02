@@ -146,6 +146,15 @@ html {
 	.imgFour {
 		background-image: url('/dist/img/dog-3391051_640.jpg');
 	}
+	.imgFive {
+		background-image: url('/dist/img/dog5.jpg');
+	}
+	.imgSix {
+		background-image: url('/dist/img/dog6.jpg');
+	}
+	.imgSeventh {
+		background-image: url('/dist/img/dog7.jpg');
+	}
 }
 .choose {
 	cursor: pointer;
@@ -199,6 +208,18 @@ html {
 		background-image: url('/dist/img/dog-3391051_640.jpg');
 		background-position: center;
 	}
+	.imgFive {
+		background-image: url('/dist/img/dog5.jpg');
+		background-position: top;
+	}
+	.imgSix {
+		background-image: url('/dist/img/dog6.jpg');
+		background-position: top;
+	}
+	.imgSeventh {
+		background-image: url('/dist/img/dog7.jpg');
+		background-position: center;
+	}
 }
 .footer {
 	display: flex;
@@ -247,5 +268,52 @@ html {
 		text-decoration: none;
 		list-style-type: none;
 		text-align: center;
+	}
+}
+
+@media (min-width: 576px) {
+	.galery {
+		.imgGalery {
+			border-radius: 5px;
+			height: 500px;
+		}
+	}
+	.app {
+		.imgGalery {
+			height: 400px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.galery {
+		.imgGalery {
+			border-radius: 5px;
+			height: 500px;
+		}
+	}
+	.app {
+		.imgGalery {
+			height: 400px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.galery {
+		height: 100dvh;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.app {
+		.imgGalery {
+			height: 400px;
+			width: 50%;
+		}
+		.text {
+			width: 100%;
+			align-items: start;
+		}
+		text-align: left;
 	}
 }
