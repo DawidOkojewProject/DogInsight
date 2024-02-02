@@ -331,20 +331,28 @@ html {
 		}
 	}
 }
-// @media (min-width: 992px) {
-// 	.galery {
-// 		width: 100%;
-// 		align-items: center;
-// 	}
-// 	.app {
-// 		.imgGalery {
-// 			// height: 400px;
-// 			// max-width: 800px;
-// 		}
-// 		.text {
-// 			// width: 100%;
-// 			// align-items: start;
-// 		}
-// 		// text-align: left;
-// 	}
-// }
+@media (min-width: 992px) {
+	.galery {
+		width: 100%;
+		display: grid;
+		gap: 5px;
+		grid-template-columns: 1fr 1fr 1fr;
+		// .imgGalery {
+		// 	width: 50%;
+		// 	height: 500px;
+		// 	background-position: top;
+		// }
+	}
+	.app {
+		.appContainer {
+			display: flex;
+
+			justify-content: center;
+			.imgGalery {
+				height: 200px;
+
+				width: 300px;
+			}
+		}
+	}
+}
