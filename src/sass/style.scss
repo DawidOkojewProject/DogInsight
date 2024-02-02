@@ -234,3 +234,18 @@ html {
 		}
 	}
 }
+.menu {
+	min-height: 100dvh;
+	width: 100dvw;
+	@include mainBackground;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	ul {
+		text-decoration: none;
+		list-style-type: none;
+		text-align: center;
+	}
+}
