@@ -14,6 +14,10 @@ const cameraSection = document.querySelector('.camera')
 const divAppPhoto = document.querySelector('.appPhoto')
 const logos = document.querySelectorAll('.logo')
 const buttonX = document.querySelector('.xButton')
+const buttonXalert = document.querySelector('.closeAlert')
+const alertMicro = document.querySelector('.alertContainer')
+const microphoneButtons = document.querySelectorAll('.fa-microphone')
+
 let textInterval
 
 const textOne = 'Pies na tym zdjęciu jest spokojny, opanowany'
@@ -28,8 +32,18 @@ const textSix =
 const textSeventh =
 	'Spokojne usposobienie jakie te psy reprezentuja widać także w tym przypadku. Pies jest skupiony na obiekcie, prawodopodobnie obserwuje jedzących wlascicieli i czekający na moment gdy "przypadkowo" spadnie im jedzenie.'
 
+const microphoneFunctionShow = () => {
+	alertMicro.classList.remove('none')
+
+	photoMode.classList.add('none')
+	wrapper.classList.remove('none')
+}
+const microphoneFunctionClose = () => {
+	alertMicro.classList.add('none')
+}
 const cameraFuction = () => {
 	clearInterval(textInterval)
+	alertMicro.classList.add('none')
 	photoMode.classList.add('none')
 	wrapper.classList.add('none')
 	cameraSection.classList.remove('none')
@@ -73,6 +87,7 @@ const swapSection = () => {
 	app.textContent = ''
 }
 const menuSection = () => {
+	alertMicro.classList.add('none')
 	clearInterval(textInterval) // Zatrzymuje animację tekstu
 	wrapper.classList.remove('none') // Pokazuje główny wrapper
 	photoMode.classList.add('none') // Ukrywa sekcję photoMode
@@ -122,3 +137,7 @@ cameraIcon.forEach(camera => {
 // })
 // cameraIcon.addEventListener('click', () => cameraFuction())
 buttonX.addEventListener('click', closeFunction)
+microphoneButtons.forEach(microphoneButton => {
+	microphoneButton.addEventListener('click', microphoneFunctionShow)
+})
+buttonXalert.addEventListener('click', microphoneFunctionClose)
