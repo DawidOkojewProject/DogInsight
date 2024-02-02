@@ -9,8 +9,11 @@ const app = document.querySelector('.appText')
 const wrapper = document.querySelector('.wrapper')
 const photoMode = document.querySelector('.photoMode')
 const photoIcon = document.querySelector('.fa-image')
+const cameraIcon = document.querySelectorAll('.fa-camera')
+const cameraSection = document.querySelector('.camera')
 const divAppPhoto = document.querySelector('.appPhoto')
 const logos = document.querySelectorAll('.logo')
+const buttonX = document.querySelector('.xButton')
 let textInterval
 
 const textOne = 'Pies na tym zdjęciu jest spokojny, opanowany'
@@ -25,6 +28,14 @@ const textSix =
 const textSeventh =
 	'Spokojne usposobienie jakie te psy reprezentuja widać także w tym przypadku. Pies jest skupiony na obiekcie, prawodopodobnie obserwuje jedzących wlascicieli i czekający na moment gdy "przypadkowo" spadnie im jedzenie.'
 
+const cameraFuction = () => {
+	wrapper.classList.add('none')
+	cameraSection.classList.remove('none')
+}
+const closeFunction = () => {
+	wrapper.classList.remove('none')
+	cameraSection.classList.add('none')
+}
 const swapSection = () => {
 	clearInterval(textInterval)
 	wrapper.classList.add('none')
@@ -34,6 +45,9 @@ const swapSection = () => {
 	divAppPhoto.classList.remove('imgTwo')
 	divAppPhoto.classList.remove('imgThree')
 	divAppPhoto.classList.remove('imgFour')
+	divAppPhoto.classList.remove('imgFive')
+	divAppPhoto.classList.remove('imgSix')
+	divAppPhoto.classList.remove('imgSeventh')
 
 	app.textContent = ''
 }
@@ -79,3 +93,11 @@ photoIcon.addEventListener('click', () => {
 logos.forEach(logo => {
 	logo.addEventListener('click', menuSection)
 })
+cameraIcon.forEach(camera => {
+	camera.addEventListener('click', cameraFuction)
+})
+// cameraIcon.forEach(camera => {
+// 	camera.addEventListener('click', cameraFuction)
+// })
+// cameraIcon.addEventListener('click', () => cameraFuction())
+buttonX.addEventListener('click', closeFunction)
