@@ -7,6 +7,7 @@ const wrapper = document.querySelector('.wrapper')
 const photoMode = document.querySelector('.photoMode')
 const photoIcon = document.querySelector('.fa-image')
 const divAppPhoto = document.querySelector('.appPhoto')
+const logos = document.querySelectorAll('.logo')
 let textInterval
 
 const textOne = 'Pies na tym zdjęciu jest spokojny, opanowany'
@@ -19,12 +20,23 @@ const swapSection = () => {
 	clearInterval(textInterval)
 	wrapper.classList.add('none')
 	photoMode.classList.remove('none')
+	divAppPhoto.classList.remove('imgGalery')
 	divAppPhoto.classList.remove('imgOne')
 	divAppPhoto.classList.remove('imgTwo')
 	divAppPhoto.classList.remove('imgThree')
 	divAppPhoto.classList.remove('imgFour')
 
 	app.textContent = ''
+}
+const menuSection = () => {
+	clearInterval(textInterval) // Zatrzymuje animację tekstu
+	wrapper.classList.remove('none') // Pokazuje główny wrapper
+	photoMode.classList.add('none') // Ukrywa sekcję photoMode
+
+	// Resetuje stan divAppPhoto
+	divAppPhoto.classList.remove('imgGalery', 'imgOne', 'imgTwo', 'imgThree', 'imgFour')
+
+	app.textContent = '' // Czyści tekst
 }
 
 const chooseText = (text, photo) => {
@@ -51,4 +63,7 @@ btn3.addEventListener('click', () => chooseText(textThree, 'imgThree'))
 btn4.addEventListener('click', () => chooseText(textFour, 'imgFour'))
 photoIcon.addEventListener('click', () => {
 	swapSection() // Dodatkowe działania, jeśli potrzebne
+})
+logos.forEach(logo => {
+	logo.addEventListener('click', menuSection)
 })

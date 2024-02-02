@@ -101,6 +101,9 @@ html {
 .logo {
 	margin-top: 5px;
 	height: 60px;
+	cursor: pointer;
+	z-index: 1000;
+	padding: 5px;
 }
 .app {
 	height: 80dvh;
