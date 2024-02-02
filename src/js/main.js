@@ -19,8 +19,11 @@ const swapSection = () => {
 	clearInterval(textInterval)
 	wrapper.classList.add('none')
 	photoMode.classList.remove('none')
-	divAppPhoto.classList.remove('imgGalery')
-	divAppPhoto.classList.remove(photo)
+	divAppPhoto.classList.remove('imgOne')
+	divAppPhoto.classList.remove('imgTwo')
+	divAppPhoto.classList.remove('imgThree')
+	divAppPhoto.classList.remove('imgFour')
+
 	app.textContent = ''
 }
 
