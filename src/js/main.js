@@ -30,6 +30,7 @@ const textSeventh =
 
 const cameraFuction = () => {
 	clearInterval(textInterval)
+	photoMode.classList.add('none')
 	wrapper.classList.add('none')
 	cameraSection.classList.remove('none')
 	divAppPhoto.classList.remove('imgGalery')

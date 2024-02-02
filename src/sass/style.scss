@@ -60,9 +60,10 @@ html {
 }
 
 .camera {
-	height: 100%;
+	height: 100dvh;
 	background: none;
 	border: none;
+	// overflow: hidden;
 }
 .none {
 	display: none !important;
@@ -330,22 +331,20 @@ html {
 		}
 	}
 }
-@media (min-width: 992px) {
-	.galery {
-		height: 100dvh;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
-	.app {
-		.imgGalery {
-			height: 400px;
-			width: 50%;
-		}
-		.text {
-			width: 100%;
-			align-items: start;
-		}
-		text-align: left;
-	}
-}
+// @media (min-width: 992px) {
+// 	.galery {
+// 		width: 100%;
+// 		align-items: center;
+// 	}
+// 	.app {
+// 		.imgGalery {
+// 			// height: 400px;
+// 			// max-width: 800px;
+// 		}
+// 		.text {
+// 			// width: 100%;
+// 			// align-items: start;
+// 		}
+// 		// text-align: left;
+// 	}
+// }
