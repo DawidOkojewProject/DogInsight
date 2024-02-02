@@ -131,17 +131,17 @@ html {
 		}
 	}
 	.imgOne {
-		background-image: url('/dist/img/dog-1121623_640.jpg');
+		background-image: url('dist/img/dog-1121623_640.jpg');
 	}
 	.imgTwo {
-		background-image: url('/dist/img/dog-1877814_640.jpg');
+		background-image: url('dist/img/dog-1877814_640.jpg');
 	}
 
 	.imgThree {
-		background-image: url('/dist/img/dog-3389729_640.jpg');
+		background-image: url('dist/img/dog-3389729_640.jpg');
 	}
 	.imgFour {
-		background-image: url('/dist/img/dog-3391051_640.jpg');
+		background-image: url('dist/img/dog-3391051_640.jpg');
 	}
 }
 .choose {
@@ -180,17 +180,17 @@ html {
 		}
 	}
 	.imgOne {
-		background-image: url('/dist/img/dog-1121623_640.jpg');
+		background-image: url('dist/img/dog-1121623_640.jpg');
 	}
 	.imgTwo {
-		background-image: url('/dist/img/dog-1877814_640.jpg');
+		background-image: url('dist/img/dog-1877814_640.jpg');
 	}
 
 	.imgThree {
-		background-image: url('/dist/img/dog-3389729_640.jpg');
+		background-image: url('dist/img/dog-3389729_640.jpg');
 	}
 	.imgFour {
-		background-image: url('/dist/img/dog-3391051_640.jpg');
+		background-image: url('dist/img/dog-3391051_640.jpg');
 	}
 }
 .footer {
@@ -198,6 +198,8 @@ html {
 	width: 100%;
 	position: fixed;
 	bottom: 0;
+	align-items: end;
+	max-height: 100%;
 	.camera {
 		height: 100%;
 		background: none;
@@ -209,6 +211,8 @@ html {
 		padding: 10px;
 		color: #fff;
 		cursor: pointer;
+
+		bottom: 0;
 	}
 	.text {
 		padding: 10px;
@@ -217,8 +221,8 @@ html {
 			width: 100%;
 			background-color: #fff;
 			border-radius: 25px;
-			font-size: 3.4vw;
-			padding: 10px;
+			font-size: 3.4rem;
+
 			border: none;
 		}
 	}
