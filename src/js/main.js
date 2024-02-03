@@ -17,6 +17,9 @@ const buttonX = document.querySelector('.xButton')
 const buttonXalert = document.querySelector('.closeAlert')
 const alertMicro = document.querySelector('.alertContainer')
 const microphoneButtons = document.querySelectorAll('.fa-microphone')
+const closeMenuBtn = document.querySelector('.closeMenu')
+const menuTemplate = document.querySelector('.menuTemplate')
+const burgersButton = document.querySelectorAll('.burgerBtn')
 
 let textInterval
 
@@ -31,6 +34,15 @@ const textSix =
 	'Pies jest lekko zmartwiony jego mimika świadczy o wewnętrznym problemie, zalecana jest dalsza obserwacja'
 const textSeventh =
 	'Spokojne usposobienie jakie te psy reprezentuja widać także w tym przypadku. Pies jest skupiony na obiekcie, prawodopodobnie obserwuje jedzących wlascicieli i czekający na moment gdy "przypadkowo" spadnie im jedzenie.'
+
+const openMenuFunction = () => {
+	wrapper.classList.add('none')
+	menuTemplate.classList.remove('none')
+}
+const closeMenuFunction = () => {
+	wrapper.classList.remove('none')
+	menuTemplate.classList.add('none')
+}
 
 const microphoneFunctionShow = () => {
 	alertMicro.classList.remove('none')
@@ -141,3 +153,7 @@ microphoneButtons.forEach(microphoneButton => {
 	microphoneButton.addEventListener('click', microphoneFunctionShow)
 })
 buttonXalert.addEventListener('click', microphoneFunctionClose)
+burgersButton.forEach(burgerButton => {
+	burgerButton.addEventListener('click', openMenuFunction)
+})
+closeMenuBtn.addEventListener('click', closeMenuFunction)
