@@ -62,6 +62,7 @@ const gptModeInAboutProject = text => {
 }
 
 const openMenuFunction = () => {
+	closeAllFUnction()
 	wrapper.classList.add('none')
 	menuTemplate.classList.remove('none')
 }
