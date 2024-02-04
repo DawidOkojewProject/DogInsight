@@ -11,10 +11,104 @@ html {
 
 @mixin mainBackground {
 	background-color: #66efae;
-	height: 100%;
+	height: 100dvh;
 	width: 100dvw;
 }
+.authors {
+	@include mainBackground;
+	height: 100dvh;
+	.authorsTitle {
+		margin-top: 50px;
+		text-align: center;
+		font-size: 3rem;
+		color: black;
+	}
+	.authorsList {
+		height: 80%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		justify-content: space-evenly;
+		list-style: none;
+		.author {
+			font-size: 3rem;
+			// text-decoration: underline;
+			color: white;
 
+			transition: background-color 0.3s;
+			cursor: pointer;
+			padding: 10px 20px;
+		}
+		.author:hover {
+			background-color: #51e6a0;
+			border-radius: 15px;
+		}
+	}
+}
+.aboutProject {
+	@include mainBackground;
+	.aboutProject_section {
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+		height: 100%;
+		.aboutProject__header {
+			color: #fff;
+			font-size: 2.8rem;
+			padding: 10px;
+		}
+		.aboutProject__info {
+			padding: 10px;
+			color: #fff;
+			font-size: 2.2rem;
+		}
+	}
+}
+.contactSection {
+	@include mainBackground;
+	.contactSection__container {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+		.contactSection__heading {
+			color: #fff;
+			font-size: 2.8rem;
+			padding: 10px;
+		}
+		.contactSection__container--ikons {
+			color: #fff;
+			width: 100%;
+			height: 60%;
+			font-size: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			justify-content: space-evenly;
+			.fa-brands {
+				margin: 20px 10px;
+				padding: 10px;
+				display: flex;
+				align-items: center;
+
+				.iconText {
+					padding: 10px;
+					// height: 100%;
+					font-size: 2rem;
+					// margin-top: auto;
+					// margin-bottom: auto;
+					// text-decoration: underline;
+				}
+			}
+		}
+	}
+}
 .wrapper {
 	@include mainBackground;
 	height: 100dvh;
@@ -29,6 +123,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	cursor: pointer;
 }
 .burgerBtn__barTop {
 	width: 100%;
@@ -305,6 +400,10 @@ html {
 		right: 0;
 		padding: 10px;
 		margin: 10px;
+		transition: transform 0.3s;
+	}
+	.closeMenu:hover {
+		transform: scale(1.1);
 	}
 	.menuContainer {
 		margin: 30px 20px;

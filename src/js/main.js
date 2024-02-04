@@ -49,6 +49,16 @@ const microphoneFunctionShow = () => {
 
 	photoMode.classList.add('none')
 	wrapper.classList.remove('none')
+	divAppPhoto.classList.remove('imgGalery')
+	divAppPhoto.classList.remove('imgOne')
+	divAppPhoto.classList.remove('imgTwo')
+	divAppPhoto.classList.remove('imgThree')
+	divAppPhoto.classList.remove('imgFour')
+	divAppPhoto.classList.remove('imgFive')
+	divAppPhoto.classList.remove('imgSix')
+	divAppPhoto.classList.remove('imgSeventh')
+	clearInterval(textInterval)
+	app.textContent = ''
 }
 const microphoneFunctionClose = () => {
 	alertMicro.classList.add('none')
@@ -95,6 +105,7 @@ const swapSection = () => {
 	divAppPhoto.classList.remove('imgFive')
 	divAppPhoto.classList.remove('imgSix')
 	divAppPhoto.classList.remove('imgSeventh')
+	alertMicro.classList.add('none')
 
 	app.textContent = ''
 }
