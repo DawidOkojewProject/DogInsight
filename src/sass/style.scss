@@ -117,6 +117,7 @@ html {
 }
 .photoMode {
 	@include mainBackground;
+	height: 100%;
 }
 .burgerBtn {
 	padding: 10px;
