@@ -49,6 +49,7 @@ html {
 }
 .aboutProject {
 	@include mainBackground;
+	overflow: hidden;
 	.aboutProject_section {
 		padding: 10px;
 		display: flex;
@@ -70,6 +71,7 @@ html {
 }
 .contactSection {
 	@include mainBackground;
+	overflow: hidden;
 	.contactSection__container {
 		height: 100%;
 		width: 100%;

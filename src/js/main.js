@@ -23,6 +23,10 @@ const burgersButton = document.querySelectorAll('.burgerBtn')
 const homeInMenuSection = document.querySelector('.hyperLinkHome')
 const authorsInMenuSection = document.querySelector('.hyperLinkAuthors')
 const authorsSection = document.querySelector('.authorsSection')
+const aboutInMenuSection = document.querySelector('.hyperLinkAboutProject')
+const aboutProjectSection = document.querySelector('.aboutProject')
+const contactInMenuSection = document.querySelector('.hyperLinkContakt')
+const contactProjectSection = document.querySelector('.contactSection')
 
 let textInterval
 
@@ -45,25 +49,6 @@ const openMenuFunction = () => {
 const closeMenuFunction = () => {
 	wrapper.classList.remove('none')
 	menuTemplate.classList.add('none')
-}
-
-const closeAllFUnction = () => {
-	clearInterval(textInterval)
-	menuTemplate.classList.add('none')
-	alertMicro.classList.add('none')
-	photoMode.classList.add('none')
-	wrapper.classList.add('none')
-	cameraSection.classList.add('none')
-	divAppPhoto.classList.remove('imgGalery')
-	divAppPhoto.classList.remove('imgOne')
-	divAppPhoto.classList.remove('imgTwo')
-	divAppPhoto.classList.remove('imgThree')
-	divAppPhoto.classList.remove('imgFour')
-	divAppPhoto.classList.remove('imgFive')
-	divAppPhoto.classList.remove('imgSix')
-	divAppPhoto.classList.remove('imgSeventh')
-	authorsSection.classList.add('none')
-	app.textContent = ''
 }
 
 const microphoneFunctionShow = () => {
@@ -131,16 +116,34 @@ const swapSection = () => {
 
 	app.textContent = ''
 }
+const closeAllFUnction = () => {
+	clearInterval(textInterval)
+	menuTemplate.classList.add('none')
+	alertMicro.classList.add('none')
+	photoMode.classList.add('none')
+	wrapper.classList.add('none')
+	cameraSection.classList.add('none')
+	divAppPhoto.classList.remove('imgGalery')
+	divAppPhoto.classList.remove('imgOne')
+	divAppPhoto.classList.remove('imgTwo')
+	divAppPhoto.classList.remove('imgThree')
+	divAppPhoto.classList.remove('imgFour')
+	divAppPhoto.classList.remove('imgFive')
+	divAppPhoto.classList.remove('imgSix')
+	divAppPhoto.classList.remove('imgSeventh')
+	authorsSection.classList.add('none')
+	aboutProjectSection.classList.add('none')
+	contactProjectSection.classList.add('none')
+	app.textContent = ''
+}
 const menuSection = () => {
 	alertMicro.classList.add('none')
-	clearInterval(textInterval) // Zatrzymuje animację tekstu
-	wrapper.classList.remove('none') // Pokazuje główny wrapper
-	photoMode.classList.add('none') // Ukrywa sekcję photoMode
 
 	// Resetuje stan divAppPhoto
-	divAppPhoto.classList.remove('imgGalery', 'imgOne', 'imgTwo', 'imgThree', 'imgFour')
 
 	app.textContent = '' // Czyści tekst
+	closeAllFUnction()
+	wrapper.classList.remove('none')
 }
 const homeFunction = () => {
 	closeAllFUnction()
@@ -149,6 +152,14 @@ const homeFunction = () => {
 const authorsFunction = () => {
 	closeAllFUnction()
 	authorsSection.classList.remove('none')
+}
+const aboutFunction = () => {
+	closeAllFUnction()
+	aboutProjectSection.classList.remove('none')
+}
+const contactFunction = () => {
+	closeAllFUnction()
+	contactProjectSection.classList.remove('none')
 }
 const chooseText = (text, photo) => {
 	wrapper.classList.remove('none')
@@ -199,3 +210,5 @@ burgersButton.forEach(burgerButton => {
 closeMenuBtn.addEventListener('click', closeMenuFunction)
 homeInMenuSection.addEventListener('click', homeFunction)
 authorsInMenuSection.addEventListener('click', authorsFunction)
+aboutInMenuSection.addEventListener('click', aboutFunction)
+contactInMenuSection.addEventListener('click', contactFunction)
