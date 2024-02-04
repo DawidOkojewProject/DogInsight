@@ -27,6 +27,7 @@ const aboutInMenuSection = document.querySelector('.hyperLinkAboutProject')
 const aboutProjectSection = document.querySelector('.aboutProject')
 const contactInMenuSection = document.querySelector('.hyperLinkContakt')
 const contactProjectSection = document.querySelector('.contactSection')
+const aboutProjectInfo = document.querySelector('.aboutProject__info')
 
 let textInterval
 
@@ -41,6 +42,24 @@ const textSix =
 	'Pies jest lekko zmartwiony jego mimika świadczy o wewnętrznym problemie, zalecana jest dalsza obserwacja'
 const textSeventh =
 	'Spokojne usposobienie jakie te psy reprezentuja widać także w tym przypadku. Pies jest skupiony na obiekcie, prawodopodobnie obserwuje jedzących wlascicieli i czekający na moment gdy "przypadkowo" spadnie im jedzenie.'
+
+const aboutProjectText = `Jest to innowacyjne narzędzie oparte na zaawansowanych mechanizmach uczenia maszynowego
+które zostało stworzone z myślą o pomocy psom z problemami behawioralnymi.
+ Głównym celem tego
+rozwiązania jest poprawa jakości życia psów poprzez zrozumienie i rozwiązanie trudności
+behawioralnych.`
+
+const gptModeInAboutProject = text => {
+	let counter = 0
+	textInterval = setInterval(() => {
+		if (counter < text.length) {
+			aboutProjectInfo.textContent += text[counter]
+			counter++
+		} else {
+			clearInterval(textInterval)
+		}
+	}, 100)
+}
 
 const openMenuFunction = () => {
 	wrapper.classList.add('none')
@@ -117,6 +136,7 @@ const swapSection = () => {
 	app.textContent = ''
 }
 const closeAllFUnction = () => {
+	aboutProjectInfo.textContent = ''
 	clearInterval(textInterval)
 	menuTemplate.classList.add('none')
 	alertMicro.classList.add('none')
@@ -153,8 +173,9 @@ const authorsFunction = () => {
 	closeAllFUnction()
 	authorsSection.classList.remove('none')
 }
-const aboutFunction = () => {
+const aboutFunction = text => {
 	closeAllFUnction()
+	gptModeInAboutProject(text)
 	aboutProjectSection.classList.remove('none')
 }
 const contactFunction = () => {
@@ -210,5 +231,5 @@ burgersButton.forEach(burgerButton => {
 closeMenuBtn.addEventListener('click', closeMenuFunction)
 homeInMenuSection.addEventListener('click', homeFunction)
 authorsInMenuSection.addEventListener('click', authorsFunction)
-aboutInMenuSection.addEventListener('click', aboutFunction)
+aboutInMenuSection.addEventListener('click', () => aboutFunction(aboutProjectText))
 contactInMenuSection.addEventListener('click', contactFunction)

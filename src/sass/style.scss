@@ -62,10 +62,14 @@ html {
 			font-size: 2.8rem;
 			padding: 10px;
 		}
-		.aboutProject__info {
-			padding: 10px;
-			color: #fff;
-			font-size: 2.2rem;
+		.aboutProjectInfoContainer {
+			width: 100%;
+			.aboutProject__info {
+				padding: 10px;
+				color: #fff;
+				font-size: 2.2rem;
+				text-align-last: left;
+			}
 		}
 	}
 }
