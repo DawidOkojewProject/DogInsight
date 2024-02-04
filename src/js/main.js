@@ -20,6 +20,9 @@ const microphoneButtons = document.querySelectorAll('.fa-microphone')
 const closeMenuBtn = document.querySelector('.closeMenu')
 const menuTemplate = document.querySelector('.menuTemplate')
 const burgersButton = document.querySelectorAll('.burgerBtn')
+const homeInMenuSection = document.querySelector('.hyperLinkHome')
+const authorsInMenuSection = document.querySelector('.hyperLinkAuthors')
+const authorsSection = document.querySelector('.authorsSection')
 
 let textInterval
 
@@ -42,6 +45,25 @@ const openMenuFunction = () => {
 const closeMenuFunction = () => {
 	wrapper.classList.remove('none')
 	menuTemplate.classList.add('none')
+}
+
+const closeAllFUnction = () => {
+	clearInterval(textInterval)
+	menuTemplate.classList.add('none')
+	alertMicro.classList.add('none')
+	photoMode.classList.add('none')
+	wrapper.classList.add('none')
+	cameraSection.classList.add('none')
+	divAppPhoto.classList.remove('imgGalery')
+	divAppPhoto.classList.remove('imgOne')
+	divAppPhoto.classList.remove('imgTwo')
+	divAppPhoto.classList.remove('imgThree')
+	divAppPhoto.classList.remove('imgFour')
+	divAppPhoto.classList.remove('imgFive')
+	divAppPhoto.classList.remove('imgSix')
+	divAppPhoto.classList.remove('imgSeventh')
+	authorsSection.classList.add('none')
+	app.textContent = ''
 }
 
 const microphoneFunctionShow = () => {
@@ -120,7 +142,14 @@ const menuSection = () => {
 
 	app.textContent = '' // Czyści tekst
 }
-
+const homeFunction = () => {
+	closeAllFUnction()
+	wrapper.classList.remove('none')
+}
+const authorsFunction = () => {
+	closeAllFUnction()
+	authorsSection.classList.remove('none')
+}
 const chooseText = (text, photo) => {
 	wrapper.classList.remove('none')
 	photoMode.classList.add('none')
@@ -168,3 +197,5 @@ burgersButton.forEach(burgerButton => {
 	burgerButton.addEventListener('click', openMenuFunction)
 })
 closeMenuBtn.addEventListener('click', closeMenuFunction)
+homeInMenuSection.addEventListener('click', homeFunction)
+authorsInMenuSection.addEventListener('click', authorsFunction)

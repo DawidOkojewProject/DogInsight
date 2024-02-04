@@ -14,7 +14,7 @@ html {
 	height: 100dvh;
 	width: 100dvw;
 }
-.authors {
+.authorsSection {
 	@include mainBackground;
 	height: 100dvh;
 	.authorsTitle {
@@ -75,12 +75,13 @@ html {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		// align-items: center;
 		padding: 10px;
+		margin: 20px 20px;
+
 		.contactSection__heading {
 			color: #fff;
 			font-size: 2.8rem;
-			padding: 10px;
 		}
 		.contactSection__container--ikons {
 			color: #fff;
@@ -92,8 +93,6 @@ html {
 			justify-content: center;
 			justify-content: space-evenly;
 			.fa-brands {
-				margin: 20px 10px;
-				padding: 10px;
 				display: flex;
 				align-items: center;
 
