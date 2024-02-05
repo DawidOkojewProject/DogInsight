@@ -177,6 +177,7 @@ const closeAllFUnction = () => {
 	contactProjectSection.classList.add('none')
 
 	divAppPhoto.textContent = ''
+	app.textContent = ''
 	index = 0
 	menuItems.forEach(menuItem => {
 		menuItem.classList.remove('animation') // Dodaje animację do każdego elementu menu
