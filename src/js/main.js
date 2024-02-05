@@ -33,17 +33,23 @@ let index = 0
 let textInterval
 
 const textOne =
-	'Pies na tym zdjęciu jest spokojny, opanowany. Posiada łagodną osobowość. Tego typu psy są dobrymi opiekunami osób młodszych; są dla nich delikatne, ale także opiekuńcze w stosunku do najmłodszych.'
+	'Pies na tym zdjęciu jest spokojny, opanowany. Posiada łagodną osobowość. Tego typu psy są dobrymi opiekunami dzieci. ponieważ są dla nich delikatne i opiekuńcze.'
+
 const textTwo =
 	'Pies spędza dobry czas, prawdopodobnie z właścicielem; wystawiony język świadczy o pozytywnym usposobieniu. Posiada spokojny charakter, jest opanowany, ale także gotowy do dalszych interakcji.'
+
 const textThree =
 	'Pies posiada pogodne usposobienie, czuje się komfortowo i jest zrelaksowany. Zwierzę jest zadbane i posiada niespożyte pokłady energii.'
+
 const textFour =
 	'Pies jest zrelaksowany, prawdopodobnie lekko zmęczony po spacerze. Zwierzę jest zadbane, prawdopodobnie niedługo pójdzie spać.'
+
 const textFive =
 	'Ma bardzo dobry kontakt z właścicielem, zadowolona mina świadczy o pełnym zrelaksowaniu i dobrze spędzonym czasie. Usposobienie jest pogodne, brak stresu.'
+
 const textSix =
 	'Pies jest zrelaksowany, ciekawy świata. Znalazł sobie zabawkę, którą się bawi. Pogodne usposobienie, brak problemów behawioralnych. Pies jest zadbany, nie zauważono żadnych negatywnych odruchów.'
+
 const textSeventh =
 	'Pies czuje się komfortowo i jest pozytywnie nastawiony do dalszych interakcji. Posiada pogodne usposobienie, brak niepokojących sygnałów. Pies jest zadbany.'
 
