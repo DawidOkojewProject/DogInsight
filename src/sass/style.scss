@@ -254,17 +254,6 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: end;
-		.choose {
-			cursor: pointer;
-			position: absolute;
-			margin-bottom: 10%;
-			padding: 20px 80px;
-			background-color: rgba($color: #252424, $alpha: 0.3);
-			color: #fff;
-			font-size: 1.8rem;
-			border-radius: 15px;
-			border: none;
-		}
 	}
 	.imgOne {
 		background-image: url('../../dist/img/dog-1121623_640.jpg');
@@ -281,9 +270,11 @@ html {
 	}
 	.imgFive {
 		background-image: url('../../dist/img/dog5.jpg');
+		background-position: top;
 	}
 	.imgSix {
 		background-image: url('../../dist/img/dog6.jpg');
+		background-position: top;
 	}
 	.imgSeventh {
 		background-image: url('../../dist/img/dog7.jpg');
@@ -313,6 +304,18 @@ html {
 		display: flex;
 		justify-content: center;
 		align-items: end;
+
+		.chooseVideo {
+			cursor: pointer;
+			position: absolute;
+			margin-bottom: 30%;
+			padding: 20px 80px;
+			background-color: rgba($color: #252424, $alpha: 0.3);
+			color: #fff;
+			font-size: 1.8rem;
+			border-radius: 15px;
+			border: none;
+		}
 		.choose {
 			position: absolute;
 			margin-bottom: 10%;

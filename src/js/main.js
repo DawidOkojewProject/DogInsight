@@ -135,6 +135,7 @@ const swapSection = () => {
 	alertMicro.classList.add('none')
 
 	app.textContent = ''
+	divAppPhoto.textContent = ''
 }
 const closeAllFUnction = () => {
 	aboutProjectInfo.textContent = ''
@@ -155,7 +156,12 @@ const closeAllFUnction = () => {
 	authorsSection.classList.add('none')
 	aboutProjectSection.classList.add('none')
 	contactProjectSection.classList.add('none')
-	app.textContent = ''
+
+	divAppPhoto.textContent = ''
+
+	// if ((divAppPhoto.contains = 'video')) {
+	// 	divAppPhoto.remove
+	// }
 }
 const menuSection = () => {
 	alertMicro.classList.add('none')
@@ -183,6 +189,32 @@ const contactFunction = () => {
 	closeAllFUnction()
 	contactProjectSection.classList.remove('none')
 }
+const addVideoToAppPhoto = (videoSrc, text) => {
+	closeAllFUnction()
+	wrapper.classList.remove('none')
+	// Usuń obecne zawartości appPhoto
+	divAppPhoto.innerHTML = ''
+
+	// Stwórz nowy element <video>
+	const videoElement = document.createElement('video')
+	videoElement.setAttribute('src', videoSrc)
+	videoElement.setAttribute('controls', '')
+	videoElement.style.width = '100%' // Dostosuj do potrzeb
+
+	// Dodaj element video do divAppPhoto
+	divAppPhoto.appendChild(videoElement)
+	app.textContent = ''
+	let counter = 0
+
+	textInterval = setInterval(() => {
+		if (counter < text.length) {
+			app.textContent += text[counter]
+			counter++
+		} else {
+			clearInterval(textInterval)
+		}
+	}, 100) // Czas w
+}
 const chooseText = (text, photo) => {
 	wrapper.classList.remove('none')
 	photoMode.classList.add('none')
@@ -201,13 +233,17 @@ const chooseText = (text, photo) => {
 	}, 100) // Czas w milisekundach, np. 1000 ms = 1 sekunda
 }
 
+const chooseVideo1Button = document.querySelector('.chooseVideoOne') // Zakładając, że masz przycisk do wyboru wideo
+const chooseVideo2Button = document.querySelector('.chooseVideoTwo') // Zakładając, że masz przycisk do wyboru wideo
+chooseVideo1Button.addEventListener('click', () => addVideoToAppPhoto('/dist/video/1.mp4', textSix)) // Przykładowa ścieżka do wideo
+chooseVideo2Button.addEventListener('click', () => addVideoToAppPhoto('/dist/video/2.mp4', textSeventh)) // Przykładowa ścieżka do wideo
+
 btn1.addEventListener('click', () => chooseText(textOne, 'imgOne'))
 btn2.addEventListener('click', () => chooseText(textTwo, 'imgTwo'))
 btn3.addEventListener('click', () => chooseText(textThree, 'imgThree'))
 btn4.addEventListener('click', () => chooseText(textFour, 'imgFour'))
 btn5.addEventListener('click', () => chooseText(textFive, 'imgFive'))
-btn6.addEventListener('click', () => chooseText(textSix, 'imgSix'))
-btn7.addEventListener('click', () => chooseText(textSeventh, 'imgSeventh'))
+
 photoIcon.addEventListener('click', () => {
 	swapSection() // Dodatkowe działania, jeśli potrzebne
 })
