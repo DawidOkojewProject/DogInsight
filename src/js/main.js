@@ -33,25 +33,21 @@ let index = 0
 let textInterval
 
 const textOne =
-	'Pies na tym zdjęciu jest spokojny, opanowany. Posiada łagodną osobowość. Tego typu psy są dobrymi opiekunami osób młodszych są dla nich delikatne ale także i opieknucze w stosunku do najmłodszych.'
+	'Pies na tym zdjęciu jest spokojny, opanowany. Posiada łagodną osobowość. Tego typu psy są dobrymi opiekunami osób młodszych; są dla nich delikatne, ale także opiekuńcze w stosunku do najmłodszych.'
 const textTwo =
-	'Pies spedza dobry czas prawdopodobnie z włascicielem, wystawiony język swiadczy o pozytywnym usposobieniu. Posiada spokojny charakter,jest opanowany ale także i gotowy do dalszych integracji.'
+	'Pies spędza dobry czas, prawdopodobnie z właścicielem; wystawiony język świadczy o pozytywnym usposobieniu. Posiada spokojny charakter, jest opanowany, ale także gotowy do dalszych interakcji.'
 const textThree =
-	'Pies posiada pogodne usposobienie,czuje sie komfortowo,jest zrelaksowany. Zwierzę jest zadbane, posiada niespożyte pokłady energii.'
+	'Pies posiada pogodne usposobienie, czuje się komfortowo i jest zrelaksowany. Zwierzę jest zadbane i posiada niespożyte pokłady energii.'
 const textFour =
-	'Pies jest zrelaksowany, prawdopodobnie lekko zmęczony po spacerze. Zwierzę jest zadbane, prawodopodobnie niedługo pojdzie spać :)'
+	'Pies jest zrelaksowany, prawdopodobnie lekko zmęczony po spacerze. Zwierzę jest zadbane, prawdopodobnie niedługo pójdzie spać.'
 const textFive =
-	'Ma bardzo dobry kontakt z włascicielem zadowolona mina świadczy o pełnym zrelaksowaniu i  dobrze spedzonym czasie. Usposobienie pogodne, brak stresu.'
+	'Ma bardzo dobry kontakt z właścicielem, zadowolona mina świadczy o pełnym zrelaksowaniu i dobrze spędzonym czasie. Usposobienie jest pogodne, brak stresu.'
 const textSix =
-	'Pies jest zrelaksowany,ciekawy swiata. Znalazl sobie zabawkę którą się bawi. Pogodne usposobnienie, brak problemów behavioralnych. Pies jest zadbany nie zauważono żadnych negatywnych odruchów.'
+	'Pies jest zrelaksowany, ciekawy świata. Znalazł sobie zabawkę, którą się bawi. Pogodne usposobienie, brak problemów behawioralnych. Pies jest zadbany, nie zauważono żadnych negatywnych odruchów.'
 const textSeventh =
-	'Pies czuje się komfortowo, jest pozytywnie nastawiony do dalszych interakcji. Posiada pogodne usposobienie, brak niepokojących sygnałów. Pies jest zadbany'
+	'Pies czuje się komfortowo i jest pozytywnie nastawiony do dalszych interakcji. Posiada pogodne usposobienie, brak niepokojących sygnałów. Pies jest zadbany.'
 
-const aboutProjectText = `Jest to innowacyjne narzędzie oparte na zaawansowanych mechanizmach uczenia maszynowego
-które zostało stworzone z myślą o pomocy psom z problemami behawioralnymi.
- Głównym celem tego
-rozwiązania jest poprawa jakości życia psów poprzez zrozumienie i rozwiązanie trudności
-behawioralnych.`
+const aboutProjectText = `Jest to innowacyjne narzędzie oparte na zaawansowanych mechanizmach uczenia maszynowego, które zostało stworzone z myślą o pomocy psom z problemami behawioralnymi. Głównym celem tego rozwiązania jest poprawa jakości życia psów poprzez zrozumienie i rozwiązanie trudności behawioralnych.`
 
 const gptModeInAboutProject = text => {
 	let counter = 0
