@@ -267,6 +267,8 @@ btn2.addEventListener('click', () => chooseText(textTwo, 'imgTwo'))
 btn3.addEventListener('click', () => chooseText(textThree, 'imgThree'))
 btn4.addEventListener('click', () => chooseText(textFour, 'imgFour'))
 btn5.addEventListener('click', () => chooseText(textFive, 'imgFive'))
+btn6.addEventListener('click', () => chooseText(textSix, 'imgSix'))
+btn7.addEventListener('click', () => chooseText(textSeventh, 'imgSeventh'))
 
 photoIcon.addEventListener('click', () => {
 	swapSection() // Dodatkowe działania, jeśli potrzebne
