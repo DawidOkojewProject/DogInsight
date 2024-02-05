@@ -257,8 +257,8 @@ const chooseText = (text, photo) => {
 
 const chooseVideo1Button = document.querySelector('.chooseVideoOne') // Zakładając, że masz przycisk do wyboru wideo
 const chooseVideo2Button = document.querySelector('.chooseVideoTwo') // Zakładając, że masz przycisk do wyboru wideo
-chooseVideo1Button.addEventListener('click', () => addVideoToAppPhoto('../../dist/video/1.mp4', textSix)) // Przykładowa ścieżka do wideo
-chooseVideo2Button.addEventListener('click', () => addVideoToAppPhoto('../../dist/video/2.mp4', textSeventh)) // Przykładowa ścieżka do wideo
+chooseVideo1Button.addEventListener('click', () => addVideoToAppPhoto('./dist/video/1.mp4', textSix)) // Przykładowa ścieżka do wideo
+chooseVideo2Button.addEventListener('click', () => addVideoToAppPhoto('./dist/video/2.mp4', textSeventh)) // Przykładowa ścieżka do wideo
 
 btn1.addEventListener('click', () => chooseText(textOne, 'imgOne'))
 btn2.addEventListener('click', () => chooseText(textTwo, 'imgTwo'))
