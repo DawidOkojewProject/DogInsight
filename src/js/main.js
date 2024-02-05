@@ -31,17 +31,20 @@ const aboutProjectInfo = document.querySelector('.aboutProject__info')
 
 let textInterval
 
-const textOne = 'Pies na tym zdjęciu jest spokojny, opanowany'
+const textOne =
+	'Pies na tym zdjęciu jest spokojny, opanowany. Posiada łagodną osobowość. Tego typu psy są dobrymi opiekunami osób młodszych są dla nich delikatne ale także i opieknucze w stosunku do najmłodszych.'
 const textTwo =
-	'Pies spedza dobry czas prawdopodobnie z włascicielem, wystawiony język swiadczy o pozytywnym usposobieniu'
-const textThree = 'Pies posiada pogodne usposobienie,czuje sie komfortowo,jest zrelaksowany'
-const textFour = 'Pies jest zrelaksowany, prawdopodobnie lekko zmęczony po spacerze'
+	'Pies spedza dobry czas prawdopodobnie z włascicielem, wystawiony język swiadczy o pozytywnym usposobieniu. Posiada spokojny charakter,jest opanowany ale także i gotowy do dalszych integracji.'
+const textThree =
+	'Pies posiada pogodne usposobienie,czuje sie komfortowo,jest zrelaksowany. Zwierzę jest zadbane, posiada niespożyte pokłady energii.'
+const textFour =
+	'Pies jest zrelaksowany, prawdopodobnie lekko zmęczony po spacerze. Zwierzę jest zadbane, prawodopodobnie niedługo pojdzie spać :)'
 const textFive =
-	'Ma bardzo dobry kontakt z włascicielem zadowolona mina świadczy o pełnym zrelaksowaniu i  dobrze spedzonym czasie'
+	'Ma bardzo dobry kontakt z włascicielem zadowolona mina świadczy o pełnym zrelaksowaniu i  dobrze spedzonym czasie. Usposobienie pogodne, brak stresu.'
 const textSix =
-	'Pies jest lekko zmartwiony jego mimika świadczy o wewnętrznym problemie, zalecana jest dalsza obserwacja'
+	'Pies jest zrelaksowany,ciekawy swiata. Znalazl sobie zabawkę którą się bawi. Pogodne usposobnienie, brak problemów behavioralnych. Pies jest zadbany nie zauważono żadnych negatywnych odruchów.'
 const textSeventh =
-	'Spokojne usposobienie jakie te psy reprezentuja widać także w tym przypadku. Pies jest skupiony na obiekcie, prawodopodobnie obserwuje jedzących wlascicieli i czekający na moment gdy "przypadkowo" spadnie im jedzenie.'
+	'Pies czuje się komfortowo, jest pozytywnie nastawiony do dalszych interakcji. Posiada pogodne usposobienie, brak niepokojących sygnałów. Pies jest zadbany'
 
 const aboutProjectText = `Jest to innowacyjne narzędzie oparte na zaawansowanych mechanizmach uczenia maszynowego
 które zostało stworzone z myślą o pomocy psom z problemami behawioralnymi.
