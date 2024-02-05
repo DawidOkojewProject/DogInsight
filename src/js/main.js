@@ -28,7 +28,8 @@ const aboutProjectSection = document.querySelector('.aboutProject')
 const contactInMenuSection = document.querySelector('.hyperLinkContakt')
 const contactProjectSection = document.querySelector('.contactSection')
 const aboutProjectInfo = document.querySelector('.aboutProject__info')
-
+const menuItems = document.querySelectorAll('.hyperLink')
+let index = 0
 let textInterval
 
 const textOne =
@@ -64,10 +65,23 @@ const gptModeInAboutProject = text => {
 	}, 100)
 }
 
-const openMenuFunction = () => {
+const openMenuFunction = index => {
 	closeAllFUnction()
 	wrapper.classList.add('none')
 	menuTemplate.classList.remove('none')
+	///ttutaj
+	////tuuu
+	index = 0
+
+	menuItems.forEach((menuItem, index) => {
+		// Usuwa klasę 'none' i dodaje 'animation' do każdego elementu menu z opóźnieniem
+		setTimeout(() => {
+			menuItem.classList.remove('none')
+			menuItem.classList.add('animation') // Dodaje animację do każdego elementu menu
+			index++
+		}, index * 400) // Opóźnienie zwiększa się o 1s dla każdego kolejnego elementu
+		index = 0
+	})
 }
 const closeMenuFunction = () => {
 	wrapper.classList.remove('none')
@@ -161,6 +175,11 @@ const closeAllFUnction = () => {
 	contactProjectSection.classList.add('none')
 
 	divAppPhoto.textContent = ''
+	index = 0
+	menuItems.forEach(menuItem => {
+		menuItem.classList.remove('animation') // Dodaje animację do każdego elementu menu
+		menuItem.classList.add('none') // Dodaje animację do każdego elementu menu
+	})
 
 	// if ((divAppPhoto.contains = 'video')) {
 	// 	divAppPhoto.remove
@@ -266,7 +285,7 @@ microphoneButtons.forEach(microphoneButton => {
 })
 buttonXalert.addEventListener('click', microphoneFunctionClose)
 burgersButton.forEach(burgerButton => {
-	burgerButton.addEventListener('click', openMenuFunction)
+	burgerButton.addEventListener('click', () => openMenuFunction(index))
 })
 closeMenuBtn.addEventListener('click', closeMenuFunction)
 homeInMenuSection.addEventListener('click', homeFunction)

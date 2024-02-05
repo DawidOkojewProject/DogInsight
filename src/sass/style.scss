@@ -487,6 +487,20 @@ html {
 	}
 }
 
+.animation {
+	animation: show 0.5s;
+	display: block;
+}
+@keyframes show {
+	0% {
+		margin-left: -500px;
+	}
+
+	100% {
+		margin-left: 0;
+	}
+}
+
 @media (min-width: 576px) {
 	.galery {
 		.imgGalery {
