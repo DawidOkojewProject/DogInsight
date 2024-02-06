@@ -91,6 +91,7 @@ const closeMenuFunction = () => {
 }
 
 const microphoneFunctionShow = () => {
+	closeAllFUnction()
 	alertMicro.classList.remove('none')
 
 	photoMode.classList.add('none')
