@@ -129,25 +129,10 @@ const cameraFuction = () => {
 const closeFunction = () => {
 	closeAllFUnction()
 	wrapper.classList.remove('none')
-
-	
 }
 const swapSection = () => {
-	clearInterval(textInterval)
-	wrapper.classList.add('none')
+	closeAllFUnction()
 	photoMode.classList.remove('none')
-	divAppPhoto.classList.remove('imgGalery')
-	divAppPhoto.classList.remove('imgOne')
-	divAppPhoto.classList.remove('imgTwo')
-	divAppPhoto.classList.remove('imgThree')
-	divAppPhoto.classList.remove('imgFour')
-	divAppPhoto.classList.remove('imgFive')
-	divAppPhoto.classList.remove('imgSix')
-	divAppPhoto.classList.remove('imgSeventh')
-	alertMicro.classList.add('none')
-
-	app.textContent = ''
-	divAppPhoto.textContent = ''
 }
 const closeAllFUnction = () => {
 	aboutProjectInfo.textContent = ''
@@ -176,16 +161,11 @@ const closeAllFUnction = () => {
 		menuItem.classList.remove('animation') // Dodaje animację do każdego elementu menu
 		menuItem.classList.add('none') // Dodaje animację do każdego elementu menu
 	})
-
-	// if ((divAppPhoto.contains = 'video')) {
-	// 	divAppPhoto.remove
-	// }
 }
 const menuSection = () => {
 	alertMicro.classList.add('none')
 
 	// Resetuje stan divAppPhoto
-
 	app.textContent = '' // Czyści tekst
 	closeAllFUnction()
 	wrapper.classList.remove('none')
