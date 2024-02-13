@@ -127,18 +127,10 @@ const cameraFuction = () => {
 	app.textContent = ''
 }
 const closeFunction = () => {
-	clearInterval(textInterval)
+	closeAllFUnction()
 	wrapper.classList.remove('none')
-	cameraSection.classList.add('none')
-	divAppPhoto.classList.remove('imgGalery')
-	divAppPhoto.classList.remove('imgOne')
-	divAppPhoto.classList.remove('imgTwo')
-	divAppPhoto.classList.remove('imgThree')
-	divAppPhoto.classList.remove('imgFour')
-	divAppPhoto.classList.remove('imgFive')
-	divAppPhoto.classList.remove('imgSix')
-	divAppPhoto.classList.remove('imgSeventh')
-	app.textContent = ''
+
+	
 }
 const swapSection = () => {
 	clearInterval(textInterval)
@@ -281,10 +273,7 @@ logos.forEach(logo => {
 cameraIcon.forEach(camera => {
 	camera.addEventListener('click', cameraFuction)
 })
-// cameraIcon.forEach(camera => {
-// 	camera.addEventListener('click', cameraFuction)
-// })
-// cameraIcon.addEventListener('click', () => cameraFuction())
+
 buttonX.addEventListener('click', closeFunction)
 microphoneButtons.forEach(microphoneButton => {
 	microphoneButton.addEventListener('click', microphoneFunctionShow)
